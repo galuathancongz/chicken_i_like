@@ -36,7 +36,7 @@ public class GameOverPopup : MonoBehaviour
     void ClickToRestart()
     {
 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 0,LoadSceneMode.Single);
+        SceneManager.LoadScene("Scene1",LoadSceneMode.Single);
         buttonback.onClick.RemoveListener(ClickToRestart);
     }
 

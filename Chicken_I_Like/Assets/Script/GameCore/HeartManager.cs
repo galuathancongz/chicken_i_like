@@ -17,6 +17,7 @@ class HeartManager : MonoBehaviour
             popupGameOver.SetActive(true);
 
         }
+        if(numberHeart >= 8) { numberHeart = 8; }
         ChangeNumberHeart();
     }
     public void ChangeNumberHeart()
