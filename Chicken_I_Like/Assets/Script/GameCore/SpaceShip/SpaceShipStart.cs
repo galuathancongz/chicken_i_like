@@ -9,12 +9,14 @@ public class SpaceShipStart : MonoBehaviour
     [SerializeField] GameObject SpaceClone;
     public float fadeInDuration = 1f;
     public float timeStartFly = 1f;
-    Vector2 StartSpacePosition = new Vector2(0, -3.5f);
+    Vector2 StartSpacePosition ;
     static public  bool gameCanStart = false;
 
     // Start is called before the first frame update
     void Start()
     {
+        StartSpacePosition = new Vector2(0, -3.5f);
+        transform.position = new Vector2(12.86f,-4);
         var sequece = DOTween.Sequence();
         sequece.Append(transform.DOMove(StartSpacePosition, timeStartFly, false));
         sequece.Append(transform.DORotate(new Vector3(0,0,0),2f,RotateMode.Fast));  
@@ -26,11 +28,14 @@ public class SpaceShipStart : MonoBehaviour
     {
         if (transform.eulerAngles == new Vector3(0, 0, 0))
         {
-            gameCanStart = true;
             SpaceClone.SetActive(true);
+            gameCanStart = true;
+            
         }
         
+        
     }
+   
     IEnumerator FadeIn(float duration)
     {
         float timePassed = 0;
@@ -46,4 +51,6 @@ public class SpaceShipStart : MonoBehaviour
         }
     }
    
+    
+
 }

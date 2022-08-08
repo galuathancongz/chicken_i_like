@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class ButtonManager : MonoBehaviour
 {
     [SerializeField] Button NewGameButton;
+    [SerializeField] Button LevelButton;
     [SerializeField] Button SettingButton;
     [SerializeField] Button QuitButton;
     [SerializeField] AudioSource audioSource;
@@ -14,6 +15,7 @@ public class ButtonManager : MonoBehaviour
     void Start()
     {
         NewGameButton.onClick.AddListener(clickNewGame);
+        LevelButton.onClick.AddListener(clicktoLevel);
         SettingButton.onClick.AddListener(clicktoSetting);
         QuitButton.onClick.AddListener(clicktoQuit);
         audioSource.Play();
@@ -24,10 +26,19 @@ public class ButtonManager : MonoBehaviour
     void clickNewGame()
     {
         audioSource.PlayOneShot(click);
-        SceneManager.LoadScene("Scene1", LoadSceneMode.Single);
+        SceneManager.LoadScene("Scene 1", LoadSceneMode.Single);
        
         NewGameButton.onClick.RemoveListener(clickNewGame);
         
+
+    }
+    void clicktoLevel()
+    {
+        audioSource.PlayOneShot(click);
+        SceneManager.LoadScene("SceneLevel", LoadSceneMode.Single);
+
+        LevelButton.onClick.RemoveListener(clicktoLevel);
+
 
     }
     void clicktoSetting()

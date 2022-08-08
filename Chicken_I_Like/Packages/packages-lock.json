@@ -1,5 +1,11 @@
 {
   "dependencies": {
+    "com.cysharp.runtimeunittesttoolkit": {
+      "version": "file:C:/Users/admin/Project Unity/GitSmart/UniTask/src/UniTask/Assets/RuntimeUnitTestToolkit",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {}
+    },
     "com.unity.2d.animation": {
       "version": "7.0.5",
       "depth": 1,
