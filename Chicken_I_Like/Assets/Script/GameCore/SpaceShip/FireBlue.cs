@@ -24,7 +24,7 @@ public class FireBlue : MonoBehaviour
     }
     void ClonePotion()
     {
-        int ramdomclone = Random.Range(1, 20);
+        int ramdomclone = Random.Range(1, 50);
         if (ramdomclone==1) {
             switch (Random.Range(1, 3))
             {

@@ -40,12 +40,13 @@ public class Score : MonoBehaviour
     {
         check = false;
         Debug.Log("Da chay vao day");
-        SpaceShipMoveobject.GetComponent<SpaceShipMove>().enabled = false;
+        //SpaceShipMoveobject.GetComponent<SpaceShipMove>().enabled = false;
+        //SpaceShipMoveobject.transform.eulerAngles = new Vector3(0, 0, 0);
         PopUpNextGame.SetActive(true);
         yield return new WaitForSeconds(seconds);
         PopUpNextGame.SetActive(false);
         yield return new WaitForSeconds(seconds+2f);
-        SpaceShipMoveobject.transform.DOMoveY(10,2,false);
+        SpaceShipMoveobject.transform.DOMoveY(8,2,false);
         yield return new WaitForSeconds(seconds + 4f);
         SpaceShipMoveobject.GetComponent<SpaceShipMove>().enabled = true;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1, LoadSceneMode.Single);

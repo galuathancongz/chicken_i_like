@@ -18,7 +18,7 @@ public class SpaceShipPotion : MonoBehaviour
     {
         
     }
-    HeartManager HeartManager = new HeartManager();
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
        

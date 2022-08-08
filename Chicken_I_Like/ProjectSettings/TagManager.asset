@@ -8,6 +8,9 @@ TagManager:
   - Enemy
   - Fire
   - Bullet
+  - Gear
+  - Heart
+  - RedFire
   layers:
   - Default
   - TransparentFX

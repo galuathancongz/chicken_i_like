@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 3107279522537612892}
   - component: {fileID: -5279083356035716209}
   - component: {fileID: 4384749489680422166}
+  - component: {fileID: 6555177327165343682}
+  - component: {fileID: 4228653293416766621}
   m_Layer: 0
   m_Name: FlyingEye
   m_TagString: Enemy
@@ -235,8 +237,35 @@ MonoBehaviour:
   BackZoneLayer:
     serializedVersion: 2
     m_Bits: 64
+  audioSource: {fileID: -5279083356035716209}
+--- !u!114 &6555177327165343682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3107279522537612889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddabb40cab5410843b75c16eca34850d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   animator: {fileID: 3107279522537612888}
-  Bullet: {fileID: 4690401986691236543, guid: c49850f27c712384a9aa62a49ada7b5a, type: 3}
   audioSource: {fileID: -5279083356035716209}
   Audioattack: {fileID: 8300000, guid: 9794c559a38d3124ea66457c3f165f36, type: 3}
+  Bullet: {fileID: 4690401986691236543, guid: c49850f27c712384a9aa62a49ada7b5a, type: 3}
+--- !u!114 &4228653293416766621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3107279522537612889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c1ae94ee8a75464abe3f9af6b32ed79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 3107279522537612888}
+  audioSource: {fileID: -5279083356035716209}
   AudioTakeHit: {fileID: 8300000, guid: 11ce9a0f3fc5d544e83fef106d405f45, type: 3}
