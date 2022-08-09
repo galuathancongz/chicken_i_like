@@ -17,11 +17,8 @@ public class FlyingEye : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        
         FeelBackZone();
-        AutoMove();
-        
+        AutoMove();        
     }
     void AutoMove()
     {

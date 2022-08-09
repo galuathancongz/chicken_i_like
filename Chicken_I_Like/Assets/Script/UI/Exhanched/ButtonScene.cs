@@ -21,6 +21,8 @@ public class ButtonScene : MonoBehaviour
     }
   public void ChangeScene()
     {
+        HeartManager.numberHeart = 5;
+        Score.score = 0;
         SceneManager.LoadScene(text.text,LoadSceneMode.Single);
         button.onClick.RemoveListener(ChangeScene);
     }

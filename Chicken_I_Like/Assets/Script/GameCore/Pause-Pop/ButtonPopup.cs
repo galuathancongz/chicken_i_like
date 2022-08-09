@@ -34,8 +34,9 @@ public class ButtonPopup : MonoBehaviour
     }
     void ClickToBack()
     {
-       
+        
         SceneManager.LoadScene("SceneHome", LoadSceneMode.Single);
+        Time.timeScale = 1;
         buttonback.onClick.RemoveListener(ClickToBack);
     }
     void ClickToMute()

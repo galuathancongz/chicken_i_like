@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -4528307007053726246}
   - component: {fileID: 4001145128419905202}
   - component: {fileID: 6596106921726609690}
+  - component: {fileID: 4558395969314331731}
   m_Layer: 0
   m_Name: fireball-red-small 1
   m_TagString: RedFire
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 1325532365964038}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -138,3 +139,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HeartPotion: {fileID: 8465966629496542007, guid: 0b91f64c2cd01d647821308d92d0a5cd, type: 3}
   GearPotion: {fileID: 3887836607446366658, guid: 22706d66ad372854a8aba7416e5109df, type: 3}
+--- !u!114 &4558395969314331731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325532365964038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba93620cc3bddd64cba740d239b1a7c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

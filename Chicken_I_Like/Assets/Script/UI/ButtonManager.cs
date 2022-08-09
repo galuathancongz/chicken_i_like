@@ -27,7 +27,8 @@ public class ButtonManager : MonoBehaviour
     {
         audioSource.PlayOneShot(click);
         SceneManager.LoadScene("Scene 1", LoadSceneMode.Single);
-       
+        HeartManager.numberHeart = 5;
+        Score.score = 0;
         NewGameButton.onClick.RemoveListener(clickNewGame);
         
 

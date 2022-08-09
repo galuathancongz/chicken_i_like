@@ -29,14 +29,16 @@ public class GameOverPopup : MonoBehaviour
     
     void ClickToBack()
     {
-        
+        Time.timeScale = 1;
         SceneManager.LoadScene("SceneHome", LoadSceneMode.Single);
         buttonback.onClick.RemoveListener(ClickToBack);
     }
     void ClickToRestart()
     {
-
-        SceneManager.LoadScene("Scene1",LoadSceneMode.Single);
+        
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
+        Time.timeScale = 1;
+        HeartManager.numberHeart = 5;
         buttonback.onClick.RemoveListener(ClickToRestart);
     }
 

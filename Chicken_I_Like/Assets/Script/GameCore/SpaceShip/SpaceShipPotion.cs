@@ -8,16 +8,7 @@ public class SpaceShipPotion : MonoBehaviour
     [SerializeField] SpriteRenderer sRender;
     [SerializeField] GameObject spaceshipmini;
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+ 
     
     private void OnTriggerEnter2D(Collider2D collision)
     {

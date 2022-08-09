@@ -40,6 +40,12 @@ public class SpaceShipMove : MonoBehaviour
             StartCoroutine(Hurt(0.3f));
 
         }
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            HeartManager.numberHeart--;
+            StartCoroutine(Hurt(0.3f));
+
+        }
     }
     IEnumerator Hurt(float seconds)
     {

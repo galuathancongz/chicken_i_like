@@ -12,9 +12,11 @@ class HeartManager : MonoBehaviour
    
     public void Update()
     {
-        if (numberHeart == 0&& popupGameOver.active==false)
+        if (numberHeart <= 0 && popupGameOver.activeSelf==false)
         {
+            numberHeart = 0;
             popupGameOver.SetActive(true);
+            Time.timeScale = 0;
 
         }
         if(numberHeart >= 8) { numberHeart = 8; }

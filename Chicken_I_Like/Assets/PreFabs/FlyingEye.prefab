@@ -123,9 +123,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0, y: 0.038422957}
   serializedVersion: 2
-  m_Radius: 0.75
+  m_Radius: 0.22255762
 --- !u!82 &-5279083356035716209
 AudioSource:
   m_ObjectHideFlags: 0
@@ -266,6 +266,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c1ae94ee8a75464abe3f9af6b32ed79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  name_TagFire: Fire
   animator: {fileID: 3107279522537612888}
   audioSource: {fileID: -5279083356035716209}
   AudioTakeHit: {fileID: 8300000, guid: 11ce9a0f3fc5d544e83fef106d405f45, type: 3}
+  numberscore: 100

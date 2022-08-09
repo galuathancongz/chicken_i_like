@@ -10,8 +10,10 @@ public class SpaceShipFire : MonoBehaviour
     GameObject Fire;
     [SerializeField] GameObject RedFire;
     [SerializeField] GameObject BlueFire;
+    [SerializeField] GameObject FlameRedFire;
     GameObject FireClone;
     bool checkClone=true;
+    
     // Doi dan
     [SerializeField] Slider slider= null;
     [SerializeField] float timeFullSlider = 20f;
@@ -55,23 +57,26 @@ public class SpaceShipFire : MonoBehaviour
             if(checktap1 == true)
             {
                 checktap1 = false;
-                Debug.Log("Vao check1");
-                StartCoroutine(WaitTap(1f));
+                
+                StartCoroutine(WaitTap(0.5f));
             }
             else
             {
-                Debug.Log("Vao check2");
+               
                 checktap2 =false;
             }
         }
         if (checktap1 == false && checktap2 == false)
         {
-            Debug.Log("Vao doi cau");
-            if (Fire == BlueFire) { Fire = RedFire;
-                Debug.Log("Doi sang mau do");
+           
+            if (Fire == BlueFire) { 
+                Fire = RedFire;
+              
+               
             }
             else if (Fire == RedFire) { Fire = BlueFire;
-                Debug.Log("Doi sang mau xanh");
+           
+               
             }
         }
         checktap2 = true;
@@ -92,9 +97,11 @@ public class SpaceShipFire : MonoBehaviour
         if (Fire == BlueFire)
         {
             slidervalue = slider.value + (slider.maxValue - slider.minValue) * (Time.deltaTime / timeFullSlider);
+            FlameRedFire.SetActive(false);
         }
         if (Fire == RedFire)
         {
+            FlameRedFire.SetActive(true);
             slidervalue = slider.value - (slider.maxValue - slider.minValue) * (Time.deltaTime / timeFullSlider)*2;
             if (slidervalue <= 0.1f)
             {
