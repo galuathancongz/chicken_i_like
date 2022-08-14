@@ -9,6 +9,7 @@ public class FlyingEyeTakeHit : MonoBehaviour
     [SerializeField] AudioSource audioSource;
     [SerializeField] AudioClip AudioTakeHit;
     [SerializeField] int numberscore=100;
+    
     // Start is called before the first frame update
     private void OnTriggerEnter2D(Collider2D collision)
     {

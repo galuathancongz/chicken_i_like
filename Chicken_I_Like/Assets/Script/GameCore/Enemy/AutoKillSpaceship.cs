@@ -18,23 +18,23 @@ public class AutoKillSpaceship : MonoBehaviour
     void Update()
     {
         RandomAutoKill();
-        Debug.Log(gameObject.transform.childCount);
     }
-    
     void RandomAutoKill()
     {
      int numberauto=  Random.Range(1, 100);
-        if (numberauto == 30&&transform.childCount>2)
+        if (numberauto == 30&&transform.childCount>=1)
         {
             transform.GetChild(0).GetComponent<FlyingEye>().enabled = false;
-            StartCoroutine(TimeEnable(2f));
-            transform.GetChild(0).transform.DOJump(SpaceShip.transform.position, 6, 1, 1f, false);
+           // StartCoroutine(TimeEnable(2f));
+            transform.GetChild(0).transform.DOJump(SpaceShip.transform.position, 6, 1, 2f, false);
         }
     }
     IEnumerator TimeEnable(float seconds)
     {
         yield return new WaitForSeconds(seconds);
-        transform.GetChild(0).GetComponent<FlyingEye>().enabled = true;
-
+        if (transform.GetChild(0) != null)
+        {
+            transform.GetChild(0).GetComponent<FlyingEye>().enabled = true;
+        }
     }
 }

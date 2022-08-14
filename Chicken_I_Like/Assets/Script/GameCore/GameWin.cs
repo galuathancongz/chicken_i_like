@@ -34,7 +34,8 @@ public class GameWin : MonoBehaviour
         SpaceShipMoveobject.transform.DOMoveY(8, 2, false);
         yield return new WaitForSeconds(seconds);
         SpaceShipMoveobject.GetComponent<SpaceShipMove>().enabled = true;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1, LoadSceneMode.Single);
+        if(SceneManager.GetActiveScene().buildIndex+1< SceneManager.sceneCountInBuildSettings) { SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1, LoadSceneMode.Single); }
+       else { SceneManager.LoadScene("SceneHome", LoadSceneMode.Single); }
         check = true;
     }
 }

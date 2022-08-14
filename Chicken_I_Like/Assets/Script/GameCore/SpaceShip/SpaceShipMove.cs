@@ -43,6 +43,7 @@ public class SpaceShipMove : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             HeartManager.numberHeart--;
+            Destroy(collision.gameObject);
             StartCoroutine(Hurt(0.3f));
 
         }

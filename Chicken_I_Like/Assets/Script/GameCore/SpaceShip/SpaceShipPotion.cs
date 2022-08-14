@@ -8,11 +8,14 @@ public class SpaceShipPotion : MonoBehaviour
     [SerializeField] SpriteRenderer sRender;
     [SerializeField] GameObject spaceshipmini;
     // Start is called before the first frame update
- 
-    
+
+    private void Update()
+    {
+        spaceshipmini.SetActive(checkpart1);
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-       
         if (collision.gameObject.CompareTag("Heart"))
         {
             HeartManager.numberHeart++;
@@ -24,12 +27,25 @@ public class SpaceShipPotion : MonoBehaviour
             Destroy(collision.gameObject);
         }
     }
- 
+    bool checkpart1=false;
+    bool checkpart2=false;
     IEnumerator Gear(float seconds)
     {
-
-        spaceshipmini.SetActive(true);
-        yield return new WaitForSeconds(seconds);
-        spaceshipmini.SetActive(false);
+        
+        if (checkpart1 == false)
+        {
+            checkpart1 = true;
+            yield return new WaitForSeconds(seconds);
+            if (checkpart2 == false)
+            {
+                checkpart1 = false;
+            }
+        }
+        else
+        {
+            checkpart2= true;
+            yield return new WaitForSeconds(seconds);
+            checkpart2 = false;
+        }
     }
 }
